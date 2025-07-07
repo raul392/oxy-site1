@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Oxy Technology, Inc.</title>
+  <style>
+    body {
+      background-color: #ffffff;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      font-size: 14px;
+    }
+    h1 {
+      font-size: 24px;
+      color: purple;
+      margin-top: 40px;
+    }
+    .banner {
+      margin: 20px 0;
+    }
+    .search-box {
+      margin-top: 10px;
+    }
+    input[type="text"] {
+      padding: 4px;
+      font-size: 14px;
+      width: 300px;
+    }
+    input[type="submit"] {
+      padding: 4px 10px;
+      font-size: 14px;
+    }
+    .footer-links {
+      margin-top: 40px;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>OXY<br><small>Technology, Inc.</small></h1>
+
+  <!-- Imagem 1: pc.png -->
+  <div class="banner">
+    <img src="pc.png" alt="PC" width="150">
+  </div>
+
+  <!-- Imagem 2: computador.png -->
+  <div class="banner">
+    <img src="computador.png" alt="Computador" width="150">
+  </div>
+
+  <!-- Campo de busca -->
+  <div class="search-box">
+    <form onsubmit="buscar(); return false;">
+      <label>Search <select><option>the Web</option></select></label>
+      and Display the Results
+      <select><option>in Standard Form</option></select><br><br>
+      <input type="text" id="pergunta" placeholder="Digite sua pergunta...">
+      <input type="submit" value="Submit">
+    </form>
+  </div>
+
+  <!-- Imagem 3: ideia.png -->
+  <div class="banner">
+    <img src="ideia.png" alt="Ideia brilhante" width="150">
+  </div>
+
+  <!-- Rodapé -->
+  <p><a href="#">Download free demo versions of Oxy Technology software</a></p>
+
+  <div class="footer-links">
+    [<a href="#">Creative</a>] [<a href="#">Search</a>] [<a href="#">Humor</a>] [<a href="#">Email</a>]
+  </div>
+
+  <script>
+    function buscar() {
+      const pergunta = document.getElementById("pergunta").value;
+      const query = encodeURIComponent(pergunta);
+      const url = "https://www.google.com/search?q=" + query;
+      window.open(url, "_blank");
+    }
+  </script>
+
+</body>
+</html>
